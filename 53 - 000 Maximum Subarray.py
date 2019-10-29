@@ -78,13 +78,18 @@ def maxSubArray(nums:[int]):
         sub_end = 0
 
         for i in range(1, len(nums)):
-            if pre+nums[i]<=nums[i] :
+            if pre+nums[i]<=nums[i] : #重新记录开始位置
                 sub_begin=i
-            pre = max(pre+nums[i], nums[i])
+                pre = nums[i]
+            else:
+                pre = pre+nums[i]   #开始位置不变，加入本数
+            #pre = max(pre+nums[i], nums[i])
 
-            if max_<=pre :
+            if max_<=pre :  #更新最大的数组，并记录结束位置
                 sub_end=i
-            max_ = max(max_, pre)
+                max_ = pre
+
+            #max_ = max(max_, pre)
         return max_, nums[sub_begin:sub_end+1]
 
 nums=[-2,1,-3,4,-1,2,1,-5,4]

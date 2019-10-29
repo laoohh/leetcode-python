@@ -11,6 +11,10 @@
 #
 # Because nums[0] + nums[1] = 2 + 7 = 9,
 # return [0, 1].
+#https://www.cnblogs.com/grandyang/p/4606334.html
+#https://blog.csdn.net/haolexiao/article/details/53487436
+#https://www.jianshu.com/p/452423986672
+
 
 
 
